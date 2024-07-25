@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # LegendOfChuck
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
@@ -27,9 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# legend_of_chuck
->>>>>>> b9a10bd19a479c608fc7459303c3cd2e0e179274
-=======
-
->>>>>>> 76357233a4245b4a04203cbccdebbd2e2fbcb494
