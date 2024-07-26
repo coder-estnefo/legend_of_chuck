@@ -1,0 +1,19 @@
+.container {
+  padding: 1em 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.categories {
+  display: inline-flex;
+  padding: 1em 0;
+  width: 100vw;
+  overflow-x: scroll;
+}
+
+mat-chip {
+  margin-left: 1em;
+  span {
+    font-size: 1.25rem;
+  }
+}

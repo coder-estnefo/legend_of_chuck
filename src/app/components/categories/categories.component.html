@@ -1,0 +1,16 @@
+<main class="container">
+  <div class="categories">
+    <mat-chip
+      color="primary"
+      *ngFor="let category of categories"
+      (click)="select(category)"
+    >
+      <mat-chip-avatar>{{ category.icon }}</mat-chip-avatar>
+      <span>{{ category.category }}</span>
+    </mat-chip>
+    <!-- <button mat-icon-button color="primary" *ngFor="let category of categories">
+      <mat-icon>{{ category.icon }}</mat-icon>
+      <span>{{ category.category }}</span>
+    </button> -->
+  </div>
+</main>

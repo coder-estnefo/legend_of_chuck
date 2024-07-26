@@ -1,0 +1,30 @@
+<section color="accent">
+  <app-categories></app-categories>
+</section>
+
+<main class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        {{ category.icon }} {{ category.category }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-progress-bar [value]="progress" color="primary"></mat-progress-bar>
+      <p>{{ characters }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="progress != 100"
+        (click)="loadJoke()"
+      >
+        <span *ngIf="!isLoading"> Next </span>
+        <span *ngIf="isLoading">
+          <mat-spinner class="spinner"></mat-spinner>
+        </span>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</main>

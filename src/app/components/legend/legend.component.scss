@@ -1,0 +1,29 @@
+section {
+  padding: 0 1em 0;
+}
+
+.container {
+  padding: 2em 0;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+mat-card {
+  margin: 2em 2em;
+}
+
+mat-card-content {
+  padding: 1.5em 2em;
+  text-align: center;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+button {
+  width: 100%;
+}
+
+.spinner {
+  height: 1.25rem !important;
+  width: 1.25rem !important;
+}
