@@ -11,7 +11,7 @@ import { JokeService } from 'src/app/services/joke/joke.service';
 export class LegendComponent implements OnDestroy {
   progress = 0;
   characters = '';
-  joke = '';
+  jokeValue = '';
   isLoading = false;
   jokeService = inject(JokeService);
   category!: Category;
@@ -41,8 +41,8 @@ export class LegendComponent implements OnDestroy {
   displayJoke() {
     var chars: string[] = [];
 
-    for (let i = 0; i < this.joke.length; i++) {
-      chars.push(this.joke[i]);
+    for (let i = 0; i < this.jokeValue.length; i++) {
+      chars.push(this.jokeValue[i]);
     }
 
     var position = 0;
@@ -60,25 +60,29 @@ export class LegendComponent implements OnDestroy {
   }
 
   private getRandomJoke() {
+    this.progress = 0;
+    this.characters = '';
     this.isLoading = true;
     setTimeout(() => {
       this.characters = '';
       this.jokeService.getRandomJoke().subscribe((joke) => {
-        this.isLoading = false;
-        this.joke = joke.value;
+        this.jokeValue = joke.value;
         this.displayJoke();
+        this.isLoading = false;
       });
     }, 5000);
   }
 
   private getJokeByCategory(category: string) {
+    this.progress = 0;
+    this.characters = '';
     this.isLoading = true;
     setTimeout(() => {
       this.characters = '';
       this.jokeService.getJokeByCategory(category).subscribe((joke) => {
-        this.isLoading = false;
-        this.joke = joke.value;
+        this.jokeValue = joke.value;
         this.displayJoke();
+        this.isLoading = false;
       });
     }, 5000);
   }
