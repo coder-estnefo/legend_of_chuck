@@ -41,6 +41,10 @@ $legend_of_chuck-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  font-size: 1.25rem;
+}
+
 html,
 body {
   height: 100%;
