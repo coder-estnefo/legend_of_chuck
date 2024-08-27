@@ -17,3 +17,7 @@ mat-chip {
     font-size: 1.25rem;
   }
 }
+
+.categories mat-chip:nth-last-child(1) {
+  margin-right: 2em;
+}

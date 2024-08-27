@@ -30,10 +30,8 @@ export class LegendComponent implements OnDestroy {
 
   loadJoke() {
     if (this.category.category.toLocaleLowerCase() == 'random') {
-      console.log('called with ', this.category);
       this.getRandomJoke();
     } else {
-      console.log('called with ', this.category);
       this.getJokeByCategory(this.category.category);
     }
   }

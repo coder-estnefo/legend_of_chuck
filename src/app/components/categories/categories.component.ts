@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { CATEGORIES } from 'src/app/categories';
 import { Category } from 'src/app/interfaces/category';
 import { JokeService } from 'src/app/services/joke/joke.service';
@@ -9,6 +9,8 @@ import { JokeService } from 'src/app/services/joke/joke.service';
   styleUrls: ['./categories.component.scss'],
 })
 export class CategoriesComponent {
+  @Input({ required: true }) printProgress = 0;
+
   categories = CATEGORIES;
   jokeService = inject(JokeService);
 
